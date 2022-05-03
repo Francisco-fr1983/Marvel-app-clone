@@ -12,7 +12,7 @@
         android:name="com.example.marvel_app_clone.ui.details.DetailsCharacterFragment"
         android:label="DetailsCharacterFragment" >
         <argument
-            android:name="characterId"
+            android:name="character"
             app:argType="com.example.marvel_app_clone.data.model.character.CharacterModel" />
     </fragment>
     <fragment
