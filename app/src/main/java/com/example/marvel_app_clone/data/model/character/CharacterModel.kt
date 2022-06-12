@@ -5,6 +5,7 @@ import com.google.gson.annotations.SerializedName
 import java.io.Serializable
 import com.example.marvel_app_clone.data.model.ThumbnailModel
 
+
 data class CharacterModel(
 
     @SerializedName("id")
