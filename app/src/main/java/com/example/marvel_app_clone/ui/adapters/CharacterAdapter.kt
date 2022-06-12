@@ -61,10 +61,19 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
                     .load(chararter.thumbnail.path + "." + chararter.thumbnail.extension)
                     .into(imgCharacter)
         }
+        holder.itemView.setOnClickListener{
+            onItemClickListener?.let {
+                it(chararter)
+            }
+        }
     }
 
     //Evento de click
     private var onItemClickListener: ((CharacterModel) -> Unit)? = null
+
+    fun setOnClickListener(listener:(CharacterModel) -> Unit) {
+        onItemClickListener = listener
+    }
 
 
 }
