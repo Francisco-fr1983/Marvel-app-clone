@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.bumptech.glide.Glide
+import com.example.marvel_app_clone.util.loadImage
 import com.example.marvel_app_clone.databinding.ItemCharacterBinding
 import com.example.marvel_app_clone.data.model.character.CharacterModel
 import com.example.marvel_app_clone.R
@@ -57,9 +57,7 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
                 tvDescriptionCharacter.text = chararter.description.limitDescription(100)
             }
 
-            Glide.with(holder.itemView.context)
-                    .load(chararter.thumbnail.path + "." + chararter.thumbnail.extension)
-                    .into(imgCharacter)
+            loadImage(imgCharacter, chararter.thumbnail.path, chararter.thumbnail.extension)
         }
         holder.itemView.setOnClickListener{
             onItemClickListener?.let {
@@ -73,6 +71,9 @@ class CharacterAdapter : RecyclerView.Adapter<CharacterAdapter.CharacterViewHold
 
     fun setOnClickListener(listener:(CharacterModel) -> Unit) {
         onItemClickListener = listener
+    }
+    fun getCharacterPosition(position: Int): CharacterModel {
+        return characters[position]
     }
 
 
