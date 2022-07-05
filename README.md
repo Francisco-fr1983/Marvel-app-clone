@@ -13,3 +13,11 @@ Imagens do projeto:
 
 
 Vídeo do aplicativo: ==> 
+
+
+Observação usar a gradle versão 6.1.1 e o plugin do gradle 4.0.1 caso tenham erros com dependências =>
+![gradle](https://user-images.githubusercontent.com/79156176/177432281-476b1682-f089-4cec-8745-d77769340c04.jpg)
+  
+
+finish()
+  
