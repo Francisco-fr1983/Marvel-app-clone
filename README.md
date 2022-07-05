@@ -8,7 +8,8 @@ Aplicativo feito referente ao curso da plataforma Udemy ministrado pelo professo
 Imagens do projeto:
 
 ![SplashScreen](https://user-images.githubusercontent.com/79156176/177430764-63d4400f-8e86-4036-a180-ffc0f6a27745.jpg)
-![Tela-inicio](https://user-images.githubusercontent.com/79156176/177431007-8946cfeb-1153-4370-86c5-71751b6a30da.jpg)
+![Tela-inicio](https://user-images.githubusercontent.com/79156176/177431520-588bb7fc-3edc-48e2-9a3b-7ba613265375.jpg)
+
 
 
 Vídeo do aplicativo: ==> 
