@@ -1,5 +1,8 @@
 package com.example.marvel_app_clone.di
 
+import android.content.Context
+import androidx.room.Room
+import com.example.marvel_app_clone.data.local.MarvelDatabase
 import com.example.marvel_app_clone.data.remote.ServiceApi
 import com.example.marvel_app_clone.util.Constants.BASE_URL
 import dagger.Module
@@ -12,15 +15,30 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import javax.inject.Singleton
 import com.example.marvel_app_clone.util.Constants
+import com.example.marvel_app_clone.util.Constants.DATABASE_NAME
+import dagger.hilt.android.qualifiers.ApplicationContext
 import timber.log.Timber
 import java.math.BigInteger
 import java.security.MessageDigest
 import java.security.NoSuchAlgorithmException
 
-
 @Module
 @InstallIn(SingletonComponent::class)
 object Module {
+
+    @Singleton
+    @Provides
+    fun provideMarvelDatabase(
+        @ApplicationContext context: Context
+    ) = Room.databaseBuilder(
+        context,
+        MarvelDatabase::class.java,
+        DATABASE_NAME
+    ).build()
+
+    @Singleton
+    @Provides
+    fun provideMarvelDao(database: MarvelDatabase) = database.marvelDao()
 
     @Singleton
     @Provides
