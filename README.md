@@ -13,7 +13,7 @@ Imagens do projeto:
 
 
 Vídeo do aplicativo: ==> 
-
+https://drive.google.com/file/d/1y6qZmavDe2AqAqPIq1r_iOYqCLn8gEKF/view?usp=sharing
 
 Observação usar a gradle versão 6.1.1 e o plugin do gradle 4.0.1 caso tenham erros com dependências =>
 ![gradle](https://user-images.githubusercontent.com/79156176/177432281-476b1682-f089-4cec-8745-d77769340c04.jpg)
